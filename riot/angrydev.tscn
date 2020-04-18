@@ -5,10 +5,10 @@
 [ext_resource path="res://riot/angrydev.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 51.2919, 129.884 )
+extents = Vector2( 60.093, 116.278 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 7.55417, 60.9855 )
+extents = Vector2( 7.90784, 32.0742 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -24.1174, 33.1615 )
@@ -21,7 +21,7 @@ texture = ExtResource( 1 )
 [node name="Area2D" type="KinematicBody2D" parent="body"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="body/Area2D"]
-position = Vector2( -25.8545, 4.94695 )
+position = Vector2( -11.0496, -2.45549 )
 shape = SubResource( 1 )
 
 [node name="pitchfork" type="Sprite" parent="."]
@@ -33,8 +33,5 @@ offset = Vector2( 0.330124, -33.3885 )
 [node name="Area2D" type="KinematicBody2D" parent="pitchfork"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pitchfork/Area2D"]
-position = Vector2( -2.64741, -20.3548 )
+position = Vector2( 0.128513, -33.3091 )
 shape = SubResource( 2 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pitchfork/Area2D"]
-polygon = PoolVector2Array( 24.3382, -93.3693, 23.4129, -57.2823, -11.7488, -40.6268, -21.9271, -61.9088 )
