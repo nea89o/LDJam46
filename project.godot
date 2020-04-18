@@ -8,15 +8,29 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Button",
+"class": "BaseBuilding",
+"language": "GDScript",
+"path": "res://buildings/base_building.gd"
+} ]
 _global_script_class_icons={
-
+"BaseBuilding": ""
 }
 
 [application]
 
 config/name="LDJam46"
+run/main_scene="res://MainScene.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SaveState="*res://save_state.gd"
+
+[display]
+
+window/size/resizable=false
 
 [rendering]
 

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://buildings/coffe_maker_button.gd" type="Script" id=1]
+
+[node name="buildings" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coffe_maker_button" type="Button" parent="."]
+margin_left = 861.462
+margin_top = 77.3558
+margin_right = 873.462
+margin_bottom = 97.3558
+custom_colors/font_color = Color( 0.12549, 0.952941, 0.811765, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Coffee Maker"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
