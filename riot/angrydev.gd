@@ -19,5 +19,5 @@ func _process(delta : float) -> void:
 	
 
 func rotate_towards(player: Node2D) -> void:
-	if player.position.x < position.x:
+	if player.position.x > position.x:
 		scale.x = -abs(scale.x)
