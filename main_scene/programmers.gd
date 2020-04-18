@@ -8,6 +8,8 @@ func _tick() -> void:
 		if SaveState.coffee < 0:
 			riot()
 			SaveState.coffee = 0
+		else:
+			SaveState.bitcoin += SaveState.programmers
 	else:
 		riot_cooldown -= 1
 		if riot_cooldown < 0:
