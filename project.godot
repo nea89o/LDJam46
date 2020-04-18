@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Button",
+"base": "Area2D",
 "class": "BaseBuilding",
 "language": "GDScript",
-"path": "res://buildings/base_building.gd"
+"path": "res://buildings/building_clickable.gd"
 } ]
 _global_script_class_icons={
 "BaseBuilding": ""
