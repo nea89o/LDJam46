@@ -1,9 +1,9 @@
 extends Ticked
 
-var riot_cooldown := 0
+var riot := preload("res://riot/riot.tscn")
 
 func _tick() -> void:
-	if riot_cooldown == 0:
+	if SaveState.riot_cooldown == 0:
 		SaveState.coffee -= SaveState.programmers
 		if SaveState.coffee < 0:
 			riot()
@@ -11,8 +11,9 @@ func _tick() -> void:
 		else:
 			SaveState.bitcoin += SaveState.programmers
 	else:
-		riot_cooldown -= 1
-		if riot_cooldown < 0:
-			riot_cooldown = 0
-func riot():
-	riot_cooldown = 10
+		SaveState.riot_cooldown -= 1
+
+func riot() -> void:
+	SaveState.riot_cooldown = -1
+	get_parent().hide()
+	get_parent().get_parent().add_child(riot.instance())
