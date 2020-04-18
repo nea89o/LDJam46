@@ -15,9 +15,9 @@ _global_script_classes=[ {
 "path": "res://riot/angrydev.gd"
 }, {
 "base": "Area2D",
-"class": "BaseBuilding",
+"class": "BaseBuyable",
 "language": "GDScript",
-"path": "res://buildings/building_clickable.gd"
+"path": "res://lib/base_buyable.gd"
 }, {
 "base": "Area2D",
 "class": "ClickableArea",
@@ -36,7 +36,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "AngryDev": "",
-"BaseBuilding": "",
+"BaseBuyable": "",
 "ClickableArea": "",
 "Manager": "",
 "Ticked": ""

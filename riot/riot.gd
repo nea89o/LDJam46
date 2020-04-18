@@ -7,7 +7,7 @@ func random_position():
 
 var devs = []
 func _ready() -> void:
-	for i in range(10):
+	for i in range(SaveState.upgrades['wageslavery'] + 1):
 		var instance: AngryDev = dev_blueprint.instance()
 		var vec = random_position()
 		while vec.distance_squared_to(manager.position) < 256 * 256:
