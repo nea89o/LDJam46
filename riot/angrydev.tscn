@@ -4,10 +4,10 @@
 [ext_resource path="res://assets/pitchfork.png" type="Texture" id=2]
 [ext_resource path="res://riot/angrydev.gd" type="Script" id=3]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 60.093, 116.278 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.90784, 32.0742 )
 
 [node name="Node2D" type="Node2D"]
@@ -22,11 +22,11 @@ texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="body/Area2D"]
 position = Vector2( -11.0496, -2.45549 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="pitchfork" type="Sprite" parent="."]
 position = Vector2( 59.0399, -57.764 )
-scale = Vector2( 1, 3 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 offset = Vector2( 0.330124, -33.3885 )
 
@@ -34,4 +34,4 @@ offset = Vector2( 0.330124, -33.3885 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pitchfork/Area2D"]
 position = Vector2( 0.128513, -33.3091 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
