@@ -2,12 +2,7 @@ extends Ticked
 
 export var base_cost := 1.0
 export var cost_multiplier := 1.0
-export var base_cps := 1.0
 export var building_identifier := ""
-
-
-func _tick():
-	SaveState.coffee += get_amount() * base_cps
 
 func _process(delta):
 	._process(delta)

@@ -1,13 +1,43 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/intern.png" type="Texture" id=1]
 [ext_resource path="res://buildings/base_building.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/hire.png" type="Texture" id=3]
+[ext_resource path="res://lib/base_buyable.gd" type="Script" id=4]
+[ext_resource path="res://buildings/dev.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 86.5173, 127.028 )
 
 [node name="buildings" type="Node2D"]
 
 [node name="intern" parent="." instance=ExtResource( 2 )]
-position = Vector2( 931.798, 83.8618 )
+position = Vector2( 79.0261, 77.0123 )
 texture = ExtResource( 1 )
 base_cost = 10.0
 cost_multiplier = 1.1
 building_identifier = "intern"
+
+[node name="dev" type="Sprite" parent="."]
+position = Vector2( 186.651, 77.0577 )
+scale = Vector2( 0.37123, 0.37123 )
+texture = ExtResource( 3 )
+script = ExtResource( 5 )
+base_cost = 200.0
+cost_multiplier = 100.0
+building_identifier = "dev"
+
+[node name="Area2D" type="Area2D" parent="dev"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dev/Area2D"]
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="dev"]
+margin_left = 22.0
+margin_top = 94.0
+margin_right = 76.0
+margin_bottom = 119.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -13,6 +13,7 @@ func _ready() -> void:
 		while vec.distance_squared_to(manager.position) < 256 * 256:
 			vec = random_position()
 		instance.position = vec
+		instance.target = manager
 		add_child(instance)
 		devs.append(instance)
 func _input(event) -> void:

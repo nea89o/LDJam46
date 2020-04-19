@@ -13,6 +13,7 @@ extents = Vector2( 7.90784, 32.0742 )
 [node name="Node2D" type="Node2D"]
 position = Vector2( -24.1174, 33.1615 )
 script = ExtResource( 3 )
+speed = 80.0
 
 [node name="body" type="Sprite" parent="."]
 position = Vector2( 43.416, -38.1387 )
