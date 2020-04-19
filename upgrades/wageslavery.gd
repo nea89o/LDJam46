@@ -1,10 +1,4 @@
-extends Node
-
-func _bought():
-	pass
-
-func get_cost():
-	return 200 * pow(100, get_amount())
+extends BuildingInterface
 
 func set_amount(amount: int) -> void:
 	SaveState.upgrades['wageslavery'] = amount

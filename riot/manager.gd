@@ -15,7 +15,6 @@ func _physics_process(delta : float) -> void:
 	var collision = move_and_collide(move_vector)
 
 	if collision: 
-		SaveState.lose_bitcoin(int(ceil(SaveState.bitcoin / 2.0)))
 		SaveState.buildings["dev"] = int(ceil(SaveState.buildings["dev"] * 8.0 / 10.0))
 		for child in get_parent().get_parent().get_children():
 			if child is CanvasItem:

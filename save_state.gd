@@ -5,8 +5,12 @@ var buildings = {
 	"dev": 1,
 }
 var upgrades = {
-	"wageslavery": 0
+	"wageslavery": 0,
+	"sunglasses": 0,
 }
+
+func has_upgrade(name):
+	return upgrades[name] > 0
 
 func gain_bitcoin(amount: int) -> void:
 	bitcoin += amount * (upgrades["wageslavery"] + 1)
@@ -27,7 +31,7 @@ func try_gain_coffee(amount: int) -> int:
 
 var coffee = 10
 var coffee_beans = 1000
-var bitcoin = 100
+var bitcoin = 10000
 var riot_cooldown = 0
 
 func pack_data():

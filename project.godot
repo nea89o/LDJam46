@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node2D",
+"base": "Ticked",
 "class": "AngryDev",
 "language": "GDScript",
 "path": "res://riot/angrydev.gd"
@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Ticked",
 "class": "BuildingInterface",
 "language": "GDScript",
-"path": "res://buildings/building_interface.gd"
+"path": "res://lib/building_interface.gd"
 }, {
 "base": "Area2D",
 "class": "ClickableArea",
@@ -34,7 +34,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://riot/manager.gd"
 }, {
-"base": "Node",
+"base": "Node2D",
 "class": "Ticked",
 "language": "GDScript",
 "path": "res://lib/ticked.gd"

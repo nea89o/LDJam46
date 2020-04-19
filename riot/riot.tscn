@@ -1,22 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://riot/riot.gd" type="Script" id=1]
-[ext_resource path="res://assets/manager2.png" type="Texture" id=2]
+[ext_resource path="res://assets/manager.tres" type="Texture" id=2]
 [ext_resource path="res://riot/manager.gd" type="Script" id=3]
-[ext_resource path="res://assets/manager1.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 33.1266, 67.3226 )
-
-[sub_resource type="AnimatedTexture" id=2]
-flags = 4
-frames = 2
-fps = 3.0
-frame_0/texture = ExtResource( 4 )
-frame_1/texture = ExtResource( 2 )
-frame_1/delay_sec = 0.0
-
-[sub_resource type="AnimatedTexture" id=3]
+extents = Vector2( 33.1266, 62.8009 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -24,10 +13,11 @@ script = ExtResource( 1 )
 [node name="manager" type="KinematicBody2D" parent="."]
 position = Vector2( 600.978, 319.858 )
 script = ExtResource( 3 )
+speed = 200.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="manager"]
+position = Vector2( -13.566, -1.50735 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="manager"]
-texture = SubResource( 2 )
-normal_map = SubResource( 3 )
+texture = ExtResource( 2 )
