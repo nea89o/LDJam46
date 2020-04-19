@@ -1,4 +1,5 @@
 extends Ticked
+class_name BuildingInterface
 
 export var base_cost := 1.0
 export var cost_multiplier := 1.0

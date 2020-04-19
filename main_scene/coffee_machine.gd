@@ -2,5 +2,5 @@ extends ClickableArea
 
 
 func _click():
-	SaveState.coffee +=1
+	SaveState.try_gain_coffee(1)
 

@@ -14,6 +14,17 @@ func gain_bitcoin(amount: int) -> void:
 func lose_bitcoin(amount: int) -> void:
 	bitcoin -= amount 
 
+func try_gain_coffee(amount: int) -> int:
+	if amount < coffee_beans:
+		coffee += amount
+		coffee_beans -= amount
+		return 0
+
+	coffee += coffee_beans
+	var remains = amount - coffee_beans
+	coffee_beans = 0
+	return remains
+
 var coffee = 10
 var coffee_beans = 1000
 var bitcoin = 100

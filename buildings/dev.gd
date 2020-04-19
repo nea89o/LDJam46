@@ -1,16 +1,16 @@
-extends "res://buildings/building_interface.gd"
+extends BuildingInterface
 
 
 var riot := preload("res://riot/riot.tscn")
 
 func _tick() -> void:
 	if SaveState.riot_cooldown == 0:
-		SaveState.coffee -= SaveState.buildings["dev"]
+		SaveState.coffee -= get_amount()
 		if SaveState.coffee < 0:
 			invoke_riot()
 			SaveState.coffee = 0
 		else:
-			SaveState.gain_bitcoin(SaveState.buildings["dev"])
+			SaveState.gain_bitcoin(get_amount())
 	else:
 		SaveState.riot_cooldown -= 1
 
