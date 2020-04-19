@@ -21,3 +21,6 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="manager"]
 texture = ExtResource( 2 )
+
+[node name="midpoint_marker" type="Node2D" parent="manager"]
+position = Vector2( -13.5661, -3.01468 )
