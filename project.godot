@@ -38,6 +38,11 @@ _global_script_classes=[ {
 "class": "Ticked",
 "language": "GDScript",
 "path": "res://lib/ticked.gd"
+}, {
+"base": "BuildingInterface",
+"class": "UpgradeInterface",
+"language": "GDScript",
+"path": "res://lib/upgrade_interface.gd"
 } ]
 _global_script_class_icons={
 "AngryDev": "",
@@ -45,14 +50,15 @@ _global_script_class_icons={
 "BuildingInterface": "",
 "ClickableArea": "",
 "Manager": "",
-"Ticked": ""
+"Ticked": "",
+"UpgradeInterface": ""
 }
 
 [application]
 
 config/name="LDJam46"
 run/main_scene="res://MainScene.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/coffeeIcon.png"
 
 [autoload]
 

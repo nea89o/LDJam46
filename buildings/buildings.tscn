@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://buildings/intern.gd" type="Script" id=1]
 [ext_resource path="res://assets/intern.png" type="Texture" id=2]
 [ext_resource path="res://assets/hire.png" type="Texture" id=3]
 [ext_resource path="res://lib/base_buyable.gd" type="Script" id=4]
 [ext_resource path="res://buildings/dev.gd" type="Script" id=5]
+[ext_resource path="res://assets/glasses.png" type="Texture" id=6]
+[ext_resource path="res://buildings/glasses.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 86.5173, 127.028 )
@@ -63,3 +65,8 @@ margin_bottom = 106.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="glasses" type="Sprite" parent="."]
+position = Vector2( 175.565, 41.7443 )
+texture = ExtResource( 6 )
+script = ExtResource( 7 )

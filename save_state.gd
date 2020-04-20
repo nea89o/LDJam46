@@ -6,7 +6,7 @@ var buildings = {
 }
 var upgrades = {
 	"wageslavery": 0,
-	"sunglasses": 1,
+	"sunglasses": 0,
 }
 
 func has_upgrade(name):

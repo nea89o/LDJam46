@@ -10,7 +10,8 @@ func _tick() -> void:
 			invoke_riot()
 			SaveState.coffee = 0
 		else:
-			SaveState.gain_bitcoin(get_amount())
+			SaveState.gain_bitcoin(int(pow(get_amount(), 
+				1 + SaveState.upgrades['sunglasses'] / 10.0)))
 	else:
 		SaveState.riot_cooldown -= 1
 
