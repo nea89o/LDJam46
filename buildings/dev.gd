@@ -5,7 +5,7 @@ var riot := preload("res://riot/riot.tscn")
 
 func _tick() -> void:
 	if SaveState.riot_cooldown == 0:
-		SaveState.coffee -= get_amount()
+		SaveState.coffee -= get_amount() * SaveState.upgrades['wageslavery']
 		if SaveState.coffee < 0:
 			invoke_riot()
 			SaveState.coffee = 0

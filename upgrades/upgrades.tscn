@@ -1,15 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/wageslavery.png" type="Texture" id=1]
 [ext_resource path="res://lib/upgrade_interface.gd" type="Script" id=2]
 [ext_resource path="res://lib/base_buyable.gd" type="Script" id=3]
 [ext_resource path="res://assets/glasses.png" type="Texture" id=4]
+[ext_resource path="res://assets/Kaffeevertrag.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14.3177, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 11.8724, 13.514 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -57,6 +61,31 @@ shape = SubResource( 2 )
 [node name="Label" type="Label" parent="sunglasses"]
 margin_right = 40.0
 margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="contract" type="Sprite" parent="."]
+position = Vector2( 58.9314, 136.893 )
+scale = Vector2( 1.84407, 1.8057 )
+texture = ExtResource( 5 )
+script = ExtResource( 2 )
+tick_rate = -1.0
+base_cost = 1000.0
+cost_multiplier = 1.1
+building_identifier = "contract"
+
+[node name="Area2D" type="Area2D" parent="contract"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="contract/Area2D"]
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="contract"]
+margin_left = -8.34222
+margin_top = 1.0
+margin_right = 12.6578
+margin_bottom = 15.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

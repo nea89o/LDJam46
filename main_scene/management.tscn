@@ -1,14 +1,20 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/background.png" type="Texture" id=1]
 [ext_resource path="res://main_scene/coffee_machine.gd" type="Script" id=2]
 [ext_resource path="res://main_scene/Label.gd" type="Script" id=3]
 [ext_resource path="res://buildings/buildings.tscn" type="PackedScene" id=4]
+[ext_resource path="res://main_scene/bean.gd" type="Script" id=5]
+[ext_resource path="res://assets/BuyBeans.png" type="Texture" id=6]
+[ext_resource path="res://lib/base_buyable.gd" type="Script" id=7]
 [ext_resource path="res://assets/coffee_maschine.png" type="Texture" id=8]
 [ext_resource path="res://upgrades/upgrades.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 360, 360 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 228.401, 203.958 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -42,3 +48,16 @@ shape = SubResource( 1 )
 
 [node name="upgrades" parent="." instance=ExtResource( 9 )]
 position = Vector2( 20.5055, 36.9098 )
+
+[node name="BeanIcon" type="Sprite" parent="."]
+position = Vector2( 421.662, 194.889 )
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="BeanIcon"]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BeanIcon/Area2D"]
+position = Vector2( -0.0478821, -0.59053 )
+scale = Vector2( 0.174159, 0.186657 )
+shape = SubResource( 2 )
