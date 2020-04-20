@@ -54,4 +54,10 @@ func pack_data():
 		"coffee_beans": coffee_beans,
 		"bitcoin": bitcoin,
 		"riot_cooldown": riot_cooldown,
+		"tutorial": tutorial,
 	}
+
+var tutorial = {
+	"introduction": false,
+}
+

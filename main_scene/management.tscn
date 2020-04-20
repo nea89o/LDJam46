@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/background.png" type="Texture" id=1]
 [ext_resource path="res://main_scene/coffee_machine.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://lib/base_buyable.gd" type="Script" id=7]
 [ext_resource path="res://assets/coffee_maschine.png" type="Texture" id=8]
 [ext_resource path="res://upgrades/upgrades.tscn" type="PackedScene" id=9]
+[ext_resource path="res://tutorial/popup.tscn" type="PackedScene" id=10]
+[ext_resource path="res://tutorial/intro.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 360, 360 )
@@ -61,3 +63,18 @@ script = ExtResource( 7 )
 position = Vector2( -0.0478821, -0.59053 )
 scale = Vector2( 0.174159, 0.186657 )
 shape = SubResource( 2 )
+
+[node name="intro" parent="." instance=ExtResource( 10 )]
+margin_left = 347.916
+margin_top = 183.211
+margin_right = 713.916
+margin_bottom = 282.211
+text = "This is coffee clicker! You are trying to keep your
+I.T. department alive, and for that you need to provide
+them with the most vital resource: Coffee.
+Start by clicking the coffee machine to brew some coffee.
+
+(Click this text to close it)"
+align = 1
+script = ExtResource( 11 )
+identifier = "introduction"
