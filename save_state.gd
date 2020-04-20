@@ -66,5 +66,6 @@ var tutorial = {
 	"riot_won": false,
 	"riot_aftermath": false,
 	"upgrades": false,
+	"lawsuit": false,
 }
 
