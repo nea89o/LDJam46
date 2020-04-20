@@ -21,4 +21,5 @@ func _physics_process(delta : float) -> void:
 				child.show()
 				child.pause_mode = PAUSE_MODE_INHERIT
 		SaveState.riot_cooldown = 10
+		SaveState.failed_riot_count += 1
 		get_parent().queue_free()

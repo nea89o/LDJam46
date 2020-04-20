@@ -40,11 +40,13 @@ func pack_data():
 		"bitcoin": bitcoin,
 		"riot_cooldown": riot_cooldown,
 		"tutorial": tutorial,
+		"failed_riot_count": failed_riot_count,
 	}
 
 var coffee = 0
 var coffee_beans = 150
 var bitcoin = 100
+var failed_riot_count = 0
 var riot_cooldown = 0
 
 var buildings = {

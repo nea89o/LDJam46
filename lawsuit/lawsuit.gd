@@ -6,9 +6,9 @@ onready var wright = preload("res://lawsuit/wright.tscn")
 func get_cost():
 	var x = 1
 	for value in SaveState.upgrades.values():
-		x *= value
+		x *= value + 1
 	for value in SaveState.buildings.values():
-		x *= value
+		x *= value + 1
 	return x
 
 func _ready():

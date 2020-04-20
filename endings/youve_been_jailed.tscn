@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/JudgeEnding.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 2.78955, 0 )
+
+[node name="JudgeEnding" type="Sprite" parent="."]
+position = Vector2( 496.908, 240.549 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 403.954
+margin_top = 498.3
+margin_right = 671.954
+margin_bottom = 580.3
+text = "When you seee him at the table,
+he turns out to be rather stable,
+and when the haaamer hits the wood top,
+He's the baddest fucker in the courthouse
+(then he does the jail dance)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

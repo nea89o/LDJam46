@@ -12,10 +12,12 @@ bg_color = Color( 0, 0.270588, 1, 1 )
 position = Vector2( -0.516018, 0 )
 
 [node name="Node2D" type="Node2D" parent="."]
+visible = false
 z_index = 2
 
 [node name="Label" type="Label" parent="Node2D"]
 pause_mode = 2
+visible = false
 margin_right = 1010.0
 margin_bottom = 14.0
 custom_styles/normal = SubResource( 1 )
