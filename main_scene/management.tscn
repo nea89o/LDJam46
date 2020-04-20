@@ -26,12 +26,14 @@ extents = Vector2( 228.401, 203.958 )
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 16 )
 
-[node name="background" type="Sprite" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="background" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 512.018, 299.606 )
 z_index = -1
 texture = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="CanvasLayer"]
 margin_right = 237.0
 margin_bottom = 97.0
 script = ExtResource( 3 )
@@ -39,38 +41,38 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="buildings" parent="." instance=ExtResource( 4 )]
+[node name="buildings" parent="CanvasLayer" instance=ExtResource( 4 )]
 position = Vector2( 695.516, 65.6175 )
 
-[node name="coffee_maschine" type="Sprite" parent="."]
+[node name="coffee_maschine" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 519.712, 314.253 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 8 )
 
-[node name="Area2D" type="Area2D" parent="coffee_maschine"]
+[node name="Area2D" type="Area2D" parent="CanvasLayer/coffee_maschine"]
 script = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coffee_maschine/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/coffee_maschine/Area2D"]
 position = Vector2( -40.0001, -0.00012207 )
 shape = SubResource( 1 )
 
-[node name="upgrades" parent="." instance=ExtResource( 9 )]
+[node name="upgrades" parent="CanvasLayer" instance=ExtResource( 9 )]
 position = Vector2( 20.5055, 36.9098 )
 
-[node name="BeanIcon" type="Sprite" parent="."]
+[node name="BeanIcon" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 421.662, 194.889 )
 texture = ExtResource( 6 )
 script = ExtResource( 5 )
 
-[node name="Area2D" type="Area2D" parent="BeanIcon"]
+[node name="Area2D" type="Area2D" parent="CanvasLayer/BeanIcon"]
 script = ExtResource( 7 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BeanIcon/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/BeanIcon/Area2D"]
 position = Vector2( -0.0478821, -0.59053 )
 scale = Vector2( 0.174159, 0.186657 )
 shape = SubResource( 2 )
 
-[node name="intro" parent="." instance=ExtResource( 10 )]
+[node name="intro" parent="CanvasLayer" instance=ExtResource( 10 )]
 visible = false
 margin_left = 347.916
 margin_top = 183.211
@@ -85,12 +87,12 @@ Start by clicking the coffee machine to brew some coffee.
 script = ExtResource( 11 )
 identifier = "introduction"
 
-[node name="coffee_beans" parent="." instance=ExtResource( 10 )]
+[node name="coffee_beans" parent="CanvasLayer" instance=ExtResource( 10 )]
 visible = false
 margin_left = 355.319
 margin_top = 99.9334
 margin_right = 699.319
-margin_bottom = 147.933
+margin_bottom = 164.933
 text = "To make coffee, you will obviously need coffee beans.
 You can buy coffee beans by clicking
 the coffee bean with the + next to it
@@ -98,12 +100,12 @@ You can buy 1000 for just 100 bitcoin"
 script = ExtResource( 12 )
 identifier = "coffee_beans"
 
-[node name="devs" parent="." instance=ExtResource( 10 )]
+[node name="devs" parent="CanvasLayer" instance=ExtResource( 10 )]
 visible = false
 margin_left = 584.068
 margin_top = 105.736
-margin_right = 844.068
-margin_bottom = 153.736
+margin_right = 987.068
+margin_bottom = 187.736
 text = "You can buy more developers by clicking
 the developer symbol with the +
 (they are the ones with coffee)
@@ -112,12 +114,12 @@ they will revolt."
 script = ExtResource( 13 )
 identifier = "devs"
 
-[node name="riot_aftermath" parent="." instance=ExtResource( 10 )]
+[node name="riot_aftermath" parent="CanvasLayer" instance=ExtResource( 10 )]
 visible = false
 margin_left = 379.131
 margin_top = 203.762
-margin_right = 651.131
-margin_bottom = 251.762
+margin_right = 654.131
+margin_bottom = 302.762
 text = "To prevent riots from happening again
 it is recommended you hire some interns
 to automatically brew coffee for your devs.
@@ -127,11 +129,12 @@ conditions"
 script = ExtResource( 14 )
 identifier = "riot_aftermath"
 
-[node name="upgrades2" parent="." instance=ExtResource( 10 )]
+[node name="upgrades2" parent="CanvasLayer" instance=ExtResource( 10 )]
+visible = false
 margin_left = 450.949
 margin_top = 200.422
-margin_right = 533.949
-margin_bottom = 231.422
+margin_right = 739.949
+margin_bottom = 265.422
 text = "You can buy upgrades on the left
 to increase your production. But be aware
 that some upgrades may have varying results

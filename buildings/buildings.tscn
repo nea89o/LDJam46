@@ -32,10 +32,20 @@ script = ExtResource( 4 )
 shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="dev"]
-margin_left = 22.0
-margin_top = 94.0
-margin_right = 76.0
-margin_bottom = 119.0
+margin_left = -5.01797
+margin_top = 42.6658
+margin_right = 48.982
+margin_bottom = 67.6658
+custom_colors/font_color = Color( 0.988235, 0.980392, 0.980392, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "abcdef"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="dev"]
+margin_right = 40.0
+margin_bottom = 14.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -62,6 +72,15 @@ margin_left = 3.0
 margin_top = 82.0
 margin_right = 43.0
 margin_bottom = 106.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="intern"]
+margin_left = -109.958
+margin_top = 65.1604
+margin_right = -69.9582
+margin_bottom = 79.1604
 __meta__ = {
 "_edit_use_anchors_": false
 }

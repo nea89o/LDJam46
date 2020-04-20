@@ -11,7 +11,9 @@ func _process(delta):
 
 func update_label():
 	var label : Label = $Label
+	var cost : Label = $Cost
 	label.text = str(get_amount())
+	cost.text = str(get_cost())
 
 func get_cost() -> float:
 	return floor(base_cost * pow(cost_multiplier, get_amount()))

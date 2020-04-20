@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/laser_blast.png-faf99ac52547b5232e1f87a2c7649cc8.stex"
+path="res://.import/AngryAnwalt.png-711611143e2daf9d2e499239119184c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/laser_blast.png"
-dest_files=[ "res://.import/laser_blast.png-faf99ac52547b5232e1f87a2c7649cc8.stex" ]
+source_file="res://assets/AngryAnwalt.png"
+dest_files=[ "res://.import/AngryAnwalt.png-711611143e2daf9d2e499239119184c3.stex" ]
 
 [params]
 
