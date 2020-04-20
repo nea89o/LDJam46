@@ -1,3 +1,77 @@
-[gd_scene format=2]
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://lawsuit/guilty.gd" type="Script" id=1]
+[ext_resource path="res://lawsuit/lawsuit.gd" type="Script" id=2]
+[ext_resource path="res://lawsuit/innocent.gd" type="Script" id=3]
+[ext_resource path="res://tutorial/popup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tutorial/lawsuit.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 110.744, 38.7256 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 76.9935, 33.0056 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 251.68, 215.419 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Area2D"]
+margin_left = 157.568
+margin_top = 181.311
+margin_right = 213.568
+margin_bottom = 195.311
+rect_scale = Vector2( 3.2479, 4.51041 )
+text = "innocent"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 683.056, 192.431 )
+shape = SubResource( 2 )
+
+[node name="Label2" type="Label" parent="Area2D2"]
+margin_left = 617.321
+margin_top = 172.677
+margin_right = 657.321
+margin_bottom = 186.677
+rect_scale = Vector2( 3.62789, 2.98543 )
+text = "guilty"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="case" type="Label" parent="CanvasModulate"]
+margin_left = 340.82
+margin_top = 4.0
+margin_right = 456.82
+margin_bottom = 37.0
+rect_scale = Vector2( 3.29888, 3.00277 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lawsuit" parent="CanvasModulate" instance=ExtResource( 4 )]
+margin_left = 397.158
+margin_top = 343.196
+margin_right = 644.158
+margin_bottom = 374.196
+text = "You are being sued. If you plead guilty,
+you will have to pay a fine.
+If you plead guilty, you will pay the fine.
+If you plead innnocent, your lawyers will fight for you,
+and you will have a chance to win or lose and pay more or less"
+script = ExtResource( 5 )
+identifier = "lawsuit"

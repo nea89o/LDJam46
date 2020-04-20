@@ -27,6 +27,11 @@ func invoke_riot() -> void:
 	var mgt = find_parent('management')
 	mgt.hide()
 	mgt.pause_mode = PAUSE_MODE_STOP
-	mgt.get_parent().add_child(riot.instance())
+	var i = null
+	if randf() < 0.5:
+		i = riot.instance()
+	else:
+		i = law_suit.instance()
+	mgt.get_parent().add_child(i)
 
 
