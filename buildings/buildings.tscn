@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://buildings/intern.gd" type="Script" id=1]
 [ext_resource path="res://assets/intern.png" type="Texture" id=2]
@@ -7,12 +7,17 @@
 [ext_resource path="res://buildings/dev.gd" type="Script" id=5]
 [ext_resource path="res://assets/glasses.png" type="Texture" id=6]
 [ext_resource path="res://buildings/glasses.gd" type="Script" id=7]
+[ext_resource path="res://lib/building_interface.gd" type="Script" id=8]
+[ext_resource path="res://assets/AddAnwalt.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 86.5173, 127.028 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 84.7312, 127.29 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 84.1407, 116.674 )
 
 [node name="buildings" type="Node2D"]
 
@@ -89,3 +94,33 @@ __meta__ = {
 position = Vector2( 175.565, 41.7443 )
 texture = ExtResource( 6 )
 script = ExtResource( 7 )
+
+[node name="lawyer" type="Sprite" parent="."]
+position = Vector2( 64.4487, 182.985 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 9 )
+script = ExtResource( 8 )
+tick_rate = -1.0
+base_cost = 1000.0
+building_identifier = "lawyer"
+
+[node name="Area2D" type="Area2D" parent="lawyer"]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lawyer/Area2D"]
+position = Vector2( -23.6842, -2.63153 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="lawyer"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="lawyer"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

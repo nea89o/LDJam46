@@ -50,6 +50,7 @@ var riot_cooldown = 0
 var buildings = {
 	"intern": 0,
 	"dev": 0,
+	"lawyer": 0,
 }
 var upgrades = {
 	"wageslavery": 0,

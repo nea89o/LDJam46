@@ -21,6 +21,7 @@ func _process(delta):
 
 var devs = []
 func _ready() -> void:
+	print("Ready")
 	for i in range(SaveState.upgrades['wageslavery'] + 1):
 		var instance: AngryDev = dev_blueprint.instance()
 		var vec = random_position()
