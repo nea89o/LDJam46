@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://riot/riot.gd" type="Script" id=1]
 [ext_resource path="res://assets/manager.tres" type="Texture" id=2]
@@ -8,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.1266, 62.8009 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.156863, 1, 1 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -49,3 +52,14 @@ margin_bottom = 210.218
 text = "The security arrived and saved you.
 For now."
 identifier = "riot_won"
+
+[node name="timer" type="Label" parent="CanvasLayer"]
+margin_left = 379.417
+margin_top = 18.8558
+margin_right = 574.417
+margin_bottom = 40.8558
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
