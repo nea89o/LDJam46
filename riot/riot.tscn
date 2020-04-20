@@ -27,22 +27,24 @@ texture = ExtResource( 2 )
 [node name="midpoint_marker" type="Node2D" parent="manager"]
 position = Vector2( -13.5661, -3.01468 )
 
-[node name="riot" parent="." instance=ExtResource( 5 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="riot" parent="CanvasLayer" instance=ExtResource( 5 )]
 visible = false
 margin_left = 379.864
 margin_top = 212.334
-margin_right = 462.864
-margin_bottom = 243.334
+margin_right = 707.864
+margin_bottom = 260.334
 text = "Your developers are rioting. Because you paid to
 little attention to their (coffee) needs they thirst for
 blood instead. Run as fast as you can!"
 script = ExtResource( 4 )
 identifier = "riot"
 
-[node name="riot_won" parent="." instance=ExtResource( 5 )]
+[node name="riot_won" parent="CanvasLayer" instance=ExtResource( 5 )]
 margin_left = 374.02
 margin_top = 179.218
-margin_right = 457.02
+margin_right = 599.02
 margin_bottom = 210.218
 text = "The security arrived and saved you.
 For now."
