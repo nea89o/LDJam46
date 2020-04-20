@@ -33,10 +33,17 @@ script = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="wageslavery"]
-margin_left = -8.62447
-margin_top = 15.9221
-margin_right = 31.3755
-margin_bottom = 29.9221
+margin_left = -1.25805
+margin_top = -22.1378
+margin_right = 38.7419
+margin_bottom = -8.13778
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="wageslavery"]
+margin_right = 40.0
+margin_bottom = 14.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -59,6 +66,15 @@ position = Vector2( 0.82769, 0.430544 )
 shape = SubResource( 2 )
 
 [node name="Label" type="Label" parent="sunglasses"]
+margin_left = -0.592613
+margin_top = -16.6465
+margin_right = 39.4074
+margin_bottom = -2.64654
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="sunglasses"]
 margin_right = 40.0
 margin_bottom = 14.0
 __meta__ = {
@@ -82,10 +98,17 @@ script = ExtResource( 3 )
 shape = SubResource( 3 )
 
 [node name="Label" type="Label" parent="contract"]
-margin_left = -8.34222
-margin_top = 1.0
-margin_right = 12.6578
-margin_bottom = 15.0
+margin_left = 2.97597
+margin_top = -15.3181
+margin_right = 23.976
+margin_bottom = -1.31815
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cost" type="Label" parent="contract"]
+margin_right = 40.0
+margin_bottom = 14.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
