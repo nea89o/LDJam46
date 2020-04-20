@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/background.png" type="Texture" id=1]
 [ext_resource path="res://main_scene/coffee_machine.gd" type="Script" id=2]
@@ -11,6 +11,11 @@
 [ext_resource path="res://upgrades/upgrades.tscn" type="PackedScene" id=9]
 [ext_resource path="res://tutorial/popup.tscn" type="PackedScene" id=10]
 [ext_resource path="res://tutorial/intro.gd" type="Script" id=11]
+[ext_resource path="res://tutorial/coffee_beans.gd" type="Script" id=12]
+[ext_resource path="res://tutorial/devs.gd" type="Script" id=13]
+[ext_resource path="res://tutorial/riot_aftermath.gd" type="Script" id=14]
+[ext_resource path="res://tutorial/upgrades.gd" type="Script" id=15]
+[ext_resource path="res://main_scene/konami_check.gd" type="Script" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 360, 360 )
@@ -19,6 +24,7 @@ extents = Vector2( 360, 360 )
 extents = Vector2( 228.401, 203.958 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 16 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 512.018, 299.606 )
@@ -34,7 +40,7 @@ __meta__ = {
 }
 
 [node name="buildings" parent="." instance=ExtResource( 4 )]
-position = Vector2( 697.186, 65.6175 )
+position = Vector2( 695.516, 65.6175 )
 
 [node name="coffee_maschine" type="Sprite" parent="."]
 position = Vector2( 519.712, 314.253 )
@@ -65,6 +71,7 @@ scale = Vector2( 0.174159, 0.186657 )
 shape = SubResource( 2 )
 
 [node name="intro" parent="." instance=ExtResource( 10 )]
+visible = false
 margin_left = 347.916
 margin_top = 183.211
 margin_right = 713.916
@@ -74,7 +81,60 @@ I.T. department alive, and for that you need to provide
 them with the most vital resource: Coffee.
 Start by clicking the coffee machine to brew some coffee.
 
-(Click this text to close it)"
-align = 1
+(Click this text to close it after 2 seconds)"
 script = ExtResource( 11 )
 identifier = "introduction"
+
+[node name="coffee_beans" parent="." instance=ExtResource( 10 )]
+visible = false
+margin_left = 355.319
+margin_top = 99.9334
+margin_right = 699.319
+margin_bottom = 147.933
+text = "To make coffee, you will obviously need coffee beans.
+You can buy coffee beans by clicking
+the coffee bean with the + next to it
+You can buy 1000 for just 100 bitcoin"
+script = ExtResource( 12 )
+identifier = "coffee_beans"
+
+[node name="devs" parent="." instance=ExtResource( 10 )]
+visible = false
+margin_left = 584.068
+margin_top = 105.736
+margin_right = 844.068
+margin_bottom = 153.736
+text = "You can buy more developers by clicking
+the developer symbol with the +
+(they are the ones with coffee)
+But be aware that if you dont provide them with enough coffee,
+they will revolt."
+script = ExtResource( 13 )
+identifier = "devs"
+
+[node name="riot_aftermath" parent="." instance=ExtResource( 10 )]
+visible = false
+margin_left = 379.131
+margin_top = 203.762
+margin_right = 651.131
+margin_bottom = 251.762
+text = "To prevent riots from happening again
+it is recommended you hire some interns
+to automatically brew coffee for your devs.
+You can also hire some lawyers so your
+devs can't sue you, because of bad working
+conditions"
+script = ExtResource( 14 )
+identifier = "riot_aftermath"
+
+[node name="upgrades2" parent="." instance=ExtResource( 10 )]
+margin_left = 450.949
+margin_top = 200.422
+margin_right = 533.949
+margin_bottom = 231.422
+text = "You can buy upgrades on the left
+to increase your production. But be aware
+that some upgrades may have varying results
+regarding your popularity."
+script = ExtResource( 15 )
+identifier = "upgrades"

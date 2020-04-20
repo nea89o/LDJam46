@@ -1,20 +1,11 @@
 extends Node
 
-var buildings = {
-	"intern": 0,
-	"dev": 1,
-}
-var upgrades = {
-	"wageslavery": 0,
-	"sunglasses": 0,
-	"contract": 0,
-}
 
 func has_upgrade(name):
 	return upgrades[name] > 0
 
 func gain_bitcoin(amount: int) -> void:
-	bitcoin += amount * (upgrades["wageslavery"] + 1)
+	bitcoin += amount
 
 func lose_bitcoin(amount: int) -> void:
 	bitcoin -= amount 
@@ -40,12 +31,6 @@ func try_buy_coffee_beans():
 	bitcoin -= cost
 	return true
 
-
-var coffee = 10
-var coffee_beans = 100
-var bitcoin = 10000
-var riot_cooldown = 0
-
 func pack_data():
 	return {
 		"buildings": buildings,
@@ -57,7 +42,28 @@ func pack_data():
 		"tutorial": tutorial,
 	}
 
+var coffee = 0
+var coffee_beans = 150
+var bitcoin = 100
+var riot_cooldown = 0
+
+var buildings = {
+	"intern": 0,
+	"dev": 0,
+}
+var upgrades = {
+	"wageslavery": 0,
+	"sunglasses": 0,
+	"contract": 0,
+}
+
 var tutorial = {
 	"introduction": false,
+	"coffee_beans": false,
+	"devs": false,
+	"riot": false,
+	"riot_won": false,
+	"riot_aftermath": false,
+	"upgrades": false,
 }
 

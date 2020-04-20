@@ -4,14 +4,18 @@ extends BuildingInterface
 var riot := preload("res://riot/riot.tscn")
 
 func _tick() -> void:
+	if get_amount() == 0:
+		return
 	if SaveState.riot_cooldown == 0:
-		SaveState.coffee -= get_amount() * SaveState.upgrades['wageslavery']
+		SaveState.coffee -= get_amount() * int(pow(2, SaveState.upgrades['wageslavery']))
 		if SaveState.coffee < 0:
 			invoke_riot()
 			SaveState.coffee = 0
 		else:
-			SaveState.gain_bitcoin(int(pow(get_amount(), 
-				1 + SaveState.upgrades['sunglasses'] / 10.0)))
+			SaveState.gain_bitcoin(int(
+				pow(get_amount(), 
+					1 + SaveState.upgrades['wageslavery'] / 10.0)
+				 * (SaveState.upgrades['sunglasses'] + 1)))
 	else:
 		SaveState.riot_cooldown -= 1
 

@@ -14,7 +14,7 @@ extents = Vector2( 7.90784, 32.0742 )
 [node name="Node2D" type="Node2D"]
 position = Vector2( -24.1174, 33.1615 )
 script = ExtResource( 3 )
-speed = 80.0
+speed = 60.0
 laser_pitchfork_texture = ExtResource( 4 )
 
 [node name="body" type="Sprite" parent="."]

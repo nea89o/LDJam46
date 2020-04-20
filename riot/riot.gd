@@ -2,8 +2,22 @@ extends Node2D
 
 var dev_blueprint = preload("res://riot/angrydev.tscn")
 onready var manager: Manager = $manager
+onready var riot_won: TutorialPopup = $riot_won
+var time_passed = 0.0
 func random_position():
 	return Vector2(rand_range(30, 1000), rand_range(30, 600))
+
+func _process(delta):
+	time_passed += delta
+	if time_passed > 30:
+		riot_won.manual_trigger()
+	if time_passed > 30.5:
+		for child in get_parent().get_children():
+			if child is CanvasItem:
+				child.show()
+				child.pause_mode = PAUSE_MODE_INHERIT
+		SaveState.riot_cooldown = 20
+		queue_free()
 
 var devs = []
 func _ready() -> void:
