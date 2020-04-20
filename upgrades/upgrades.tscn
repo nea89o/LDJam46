@@ -33,7 +33,10 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wageslavery/Area2D"]
 shape = SubResource( 1 )
 
-[node name="Label" type="Label" parent="wageslavery"]
+[node name="Node2D" type="Node2D" parent="wageslavery"]
+z_index = 1
+
+[node name="Label" type="Label" parent="wageslavery/Node2D"]
 margin_left = -1.25805
 margin_top = -22.1378
 margin_right = 38.7419
@@ -42,7 +45,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cost" type="Label" parent="wageslavery"]
+[node name="Cost" type="Label" parent="wageslavery/Node2D"]
 margin_right = 40.0
 margin_bottom = 14.0
 __meta__ = {
@@ -66,16 +69,19 @@ script = ExtResource( 3 )
 position = Vector2( 0.82769, 0.430544 )
 shape = SubResource( 2 )
 
-[node name="Label" type="Label" parent="sunglasses"]
-margin_left = -0.592613
+[node name="Node2D" type="Node2D" parent="sunglasses"]
+z_index = 1
+
+[node name="Label" type="Label" parent="sunglasses/Node2D"]
+margin_left = -0.592617
 margin_top = -16.6465
 margin_right = 39.4074
-margin_bottom = -2.64654
+margin_bottom = -2.6465
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cost" type="Label" parent="sunglasses"]
+[node name="Cost" type="Label" parent="sunglasses/Node2D"]
 margin_right = 40.0
 margin_bottom = 14.0
 __meta__ = {
@@ -98,16 +104,19 @@ script = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="contract/Area2D"]
 shape = SubResource( 3 )
 
-[node name="Label" type="Label" parent="contract"]
+[node name="Node2D" type="Node2D" parent="contract"]
+z_index = 1
+
+[node name="Label" type="Label" parent="contract/Node2D"]
 margin_left = 2.97597
 margin_top = -15.3181
 margin_right = 23.976
-margin_bottom = -1.31815
+margin_bottom = -1.3181
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cost" type="Label" parent="contract"]
+[node name="Cost" type="Label" parent="contract/Node2D"]
 margin_right = 40.0
 margin_bottom = 14.0
 __meta__ = {
