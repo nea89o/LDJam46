@@ -8,11 +8,23 @@ Hire new employees, buy upgrades and, most importantly, make sure you don't run 
 
 Watch out for the laser-pitchforks!
 
-## Upgrades
 
- - Sunglasses: Increases developer productivity, but also increases danger of riots
- - Wageslavery: Increases developer productivity, but also increases danger of riots and coffee consumption
- - Contract: Autobuys coffee beans and lowers the price with each additional upgrade.
+Unfortunately, we didn't manage to finish the UI details on time,
+so here are some hints to help you keep I.T. alive:
+
+
+**UPGRADES**
+- *Coffee Contract:* Never worry about restocking coffee beans again!
+- *Neos Sunglasses:* Increase the confidence (and productivity!) of your devs! May result in them to getting more... lets say aggressive during riots
+- *Wage Slavery:* Overtime for everyone! Sure, the employees won't be happy about that but you'll earn more money!
+
+**EMPLOYEES**
+- *Intern:* Underpaid barista. More coffee for the devs!
+- *Devolper:* Can't survive without that sweet, sweet Bean Juice. Turns coffee into money!
+- *Lawyer:* You better not plead innocent in a trial if you don't hire an attorney first!
+
+
+
 
 <details>
 <summary>Secrets</summary>
