@@ -20,6 +20,7 @@ Watch out for the laser-pitchforks!
  - The konami code
  - The court ending is a reference to pong dance.
  - If you have the sunglasses upgrade, the devs will have laser pitchforks
-
+ - The lawyers are a reference to Ace Attorney.
+ - And probably more, but i forgot about a lot of them during development
 
 </details>
