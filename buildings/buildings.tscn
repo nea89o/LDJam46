@@ -19,7 +19,7 @@ extents = Vector2( 84.7312, 127.29 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 84.1407, 116.674 )
 
-[node name="buildings" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="dev" type="Sprite" parent="."]
 position = Vector2( 186.651, 77.0577 )
@@ -36,11 +36,15 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dev/Area2D"]
 shape = SubResource( 1 )
 
-[node name="Label" type="Label" parent="dev"]
-margin_left = -5.01797
-margin_top = 42.6658
-margin_right = 48.982
-margin_bottom = 67.6658
+[node name="Node2D" type="Node2D" parent="dev"]
+z_index = 1
+
+[node name="Label" type="Label" parent="dev/Node2D"]
+margin_left = 43.5082
+margin_top = -10.4789
+margin_right = 97.5082
+margin_bottom = 14.5211
+rect_scale = Vector2( 2.91673, 3.28236 )
 custom_colors/font_color = Color( 0.988235, 0.980392, 0.980392, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "abcdef"
@@ -48,9 +52,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cost" type="Label" parent="dev"]
-margin_right = 40.0
-margin_bottom = 14.0
+[node name="Cost" type="Label" parent="dev/Node2D"]
+margin_left = 34.8552
+margin_top = 41.5987
+margin_right = 74.8552
+margin_bottom = 55.5987
+rect_scale = Vector2( 3.34687, 4.43754 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -72,26 +79,33 @@ script = ExtResource( 4 )
 position = Vector2( -30.114, -8.1076 )
 shape = SubResource( 2 )
 
-[node name="Label" type="Label" parent="intern"]
-margin_left = 3.0
-margin_top = 82.0
-margin_right = 43.0
-margin_bottom = 106.0
+[node name="Node2D" type="Node2D" parent="intern"]
+position = Vector2( 2.63153, 0 )
+z_index = 1
+
+[node name="Label" type="Label" parent="intern/Node2D"]
+margin_left = 39.4752
+margin_top = -30.0618
+margin_right = 79.4752
+margin_bottom = -6.06177
+rect_scale = Vector2( 3.99276, 3.91145 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cost" type="Label" parent="intern"]
-margin_left = -109.958
-margin_top = 65.1604
-margin_right = -69.9582
-margin_bottom = 79.1604
+[node name="Cost" type="Label" parent="intern/Node2D"]
+margin_left = 42.8489
+margin_top = 50.6428
+margin_right = 82.8487
+margin_bottom = 64.6428
+rect_scale = Vector2( 2.76238, 4.23573 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="glasses" type="Sprite" parent="."]
 position = Vector2( 175.565, 41.7443 )
+z_index = 1
 texture = ExtResource( 6 )
 script = ExtResource( 7 )
 
@@ -111,16 +125,25 @@ script = ExtResource( 4 )
 position = Vector2( -23.6842, -2.63153 )
 shape = SubResource( 3 )
 
-[node name="Label" type="Label" parent="lawyer"]
-margin_right = 40.0
-margin_bottom = 14.0
+[node name="Node2D" type="Node2D" parent="lawyer"]
+z_index = 1
+
+[node name="Label" type="Label" parent="lawyer/Node2D"]
+margin_left = 47.1556
+margin_top = -15.004
+margin_right = 87.1556
+margin_bottom = -1.00404
+rect_scale = Vector2( 3.32866, 3.98913 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cost" type="Label" parent="lawyer"]
-margin_right = 40.0
-margin_bottom = 14.0
+[node name="Cost" type="Label" parent="lawyer/Node2D"]
+margin_left = 45.1249
+margin_top = 54.15
+margin_right = 85.1249
+margin_bottom = 68.15
+rect_scale = Vector2( 3.30375, 3.80337 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

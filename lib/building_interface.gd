@@ -10,8 +10,8 @@ func _process(delta):
 	update_label()
 
 func update_label():
-	var label : Label = $Label
-	var cost : Label = $Cost
+	var label : Label = $Node2D/Label
+	var cost : Label = $Node2D/Cost
 	label.text = str(get_amount())
 	cost.text = str(get_cost())
 
